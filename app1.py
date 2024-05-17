@@ -59,3 +59,46 @@ if (high_income or good_credit) and not student:
 age = 22
 if 18 <= age < 65:
     print("Eligible")
+# for loops
+for number in range(3, 10, 2):
+    print("Attempt", number + 1, number * ".")
+
+successful = False
+for number in range(3):
+    print("Attempt")
+    if successful:
+        print("Successful")
+        break
+else:
+    print("Attempted 3 times and failed")
+
+
+# nested loops
+for x in range(5):
+    for y in range(3):
+        print(f"({x}, {y})")
+
+print(type(5))
+print(type(range(5)))
+
+# iterable
+for x in "Python":
+    print(x)
+
+for x in [1, 2, 3, 4]:
+    print(x)
+
+# for item in shopping_cart:
+    # print(item)
+
+# while loops
+number = 100
+while number > 0:
+    print(number)
+    number //= 2
+# infinite loops need to have a way to stop to avoid consuming too much memory
+while True:
+    command = input(">")
+    print("ECHO", command)
+    if command.lower() == "quit":
+        break
