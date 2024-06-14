@@ -34,3 +34,8 @@ third = numbers[2]
 def multiply(*numbers):
 
     multiply(numbers)
+
+letters = ["a","b","c"]
+items = [0,"a"]
+for index, letter in enumerate(letters):
+    print(index, letter)

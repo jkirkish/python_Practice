@@ -69,11 +69,11 @@ def save_user(**user):
     print(user)
     print(user[id])
     print(user["name"])
-    print(user[age])
+    print(user[age]) # type: ignore
 
 
 save_user(id=1, name="John", age=22)
-# {'id': 1, 'name': 'John', 'age': 22} this is a dicitionary
+# {'id': 1, 'name': 'John', 'age': 22} this is a dictionary
 
 # (2,3,4,5) is a tuple
 # [2,3,4,5] is a list
