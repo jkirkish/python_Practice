@@ -107,4 +107,60 @@ if not browsing_session:
     print("redirect", browsing_session[-1])
 
 
+#stacks
+browsing_session = []
+browsing_session.append(1)
+browsing_session.append(2)
+browsing_session.append(3)
+print(browsing_session)
+browsing_session.pop()
+if not browsing_session:
+    browsing_session[-1]
 
+#stack operations (Lastin Last out)
+last = browsing_session.pop()
+print(last)
+print("redirect",browsing_session[-1])
+if not browsing_session:
+    print("disable")
+
+#QUeues  (FIrst In First Out)
+from collections import deque
+queue = deque([])
+queue = deque([])
+queue.append(1)
+queue.append(2)
+queue.append(3)
+queue.popleft()
+print(queue)
+if not queue:
+    print("empty")
+
+#tuples are immutable they are good at preventing errors with adding or removing objects
+point = (1,2,3)
+print(type(point[0:2]))
+x,y,z = point
+point = tuple("Hello World")
+print(point)
+
+if 10 in point:
+    print("exists")
+
+#swapping numbers
+x = 10
+y = 11
+
+x, y = y, x
+a, b = 1, 2
+
+print("x", x)
+print("y", y)
+
+
+#array in python are best when dealing with large sequence of numbers and you encounter 
+#performance problems
+from array import array
+
+numbers = array("i", [1,2,3])
+numbers[0] = 1.0
+[1,2,3]
