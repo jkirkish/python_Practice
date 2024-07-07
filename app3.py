@@ -81,7 +81,7 @@ items = [
  #   prices.append(items[1])
 
 prices = list(map(lambda item: item[1], items))
-prices = [item[1] for item in items] #use list comprehensions becuase they are cleaner and more performant 
+prices = [item[1] for item in items] #use list comprehensions because they are cleaner and more performant 
 print(prices)
 
 

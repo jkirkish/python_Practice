@@ -1,7 +1,11 @@
 import math
 
 print("Hello World ")
+print("how are you?")
+print("I love learning python")
+print("Learning Python is a nice career advancement")
 print("*" * 10)
+
 # https: //peps.python.org/pep-008/
 print("Hello World")
 
