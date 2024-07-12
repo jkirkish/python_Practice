@@ -4,3 +4,5 @@ print(numbers)
 
 chars = list("Hello World")
 print(chars)
+
+#print these
