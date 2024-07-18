@@ -37,9 +37,9 @@ first = numbers[0]
 second = numbers[1]
 third = numbers[2]
 
-numbers = [1,2,3,4,4,4,4,4,4,4,4,4,4]
+numbers = [1,2,3,4,4,4,4,4,4,4,4,4,5]
 """You can unpack first and second values in a list and use *other to put all following values 
-in a list called other"""
+in a list called other. only all of the repeating 4's go in. you need another variable for the 5"""
 first, second, *other, last= numbers  #list unpacking
 #same way below you can put each index in numbers into a variable name
 first = numbers[0]
@@ -64,7 +64,7 @@ for letters in letters:
     print(letters)
 
 #you can use enumerate in a for loop that gives you a tuple of the list that is read only
-#print("This is a tuple of letter list")
+print("This is a tuple of letter list")
 letters = ["a","b","c"]
 for letter in enumerate(letters):
     print(letter[0], letter[1])
