@@ -64,6 +64,10 @@ for letters in letters:
     print(letters)
 
 #you can use enumerate in a for loop that gives you a tuple of the list that is read only
+''' tuple is a built-in data type that represents a collection of ordered, immutable items. 
+Tuples are similar to lists but have a key difference: once a tuple is created, its contents
+ cannot be changed. This immutability makes tuples suitable for storing fixed collections of 
+ items and can be used as keys in dictionaries, unlike lists.'''
 print("This is a tuple of letter list")
 letters = ["a","b","c"]
 for letter in enumerate(letters):

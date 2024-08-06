@@ -23,18 +23,18 @@ is_published = False
 course = "Python Programming"
 print(students_count)
 print(len(course))  # return the number of characters 18 in the string
-print(course[0])
-print(course[-1])
-print(course[0:3])
-print(course[0:])
-print(course[:3])
-print(course[:])
+print(course[0]) #P
+print(course[-1])#g
+print(course[0:3])#Pyt
+print(course[0:])#Python Programming
+print(course[:3])#Pyt
+print(course[:])#Python Programming
 
 # escape characters in python
 # \"
 # \'
 # \\
-# \n
+# \n prints the value or text to the next line 
 course = "Python \nProgramming"
 print(course)
 first = "first Name"
@@ -47,14 +47,14 @@ full = f"{len(first)} {2 + 2}"  # formatted strings
 print(full)
 
 course = "   python programming"
-print(course.upper())
+print(course.upper()) #to upper case
 print(course)
-print(course.lower())
-print(course.title())
-print(course.rstrip())
-print(course.find("pro"))  # returns the index
-print(course.find("bde"))
-print(course.replace("p", "j"))
+print(course.lower())# to lower case
+print(course.title())# capitalizes the first letter of each wor
+print(course.rstrip()) #removes the trailing whitespace or any trailing characters end of a string
+print(course.find("pro"))  # method in Python is used to search for the first occurrence of a specified substring in a string.
+print(course.find("bde"))  # It returns the lowest index where the substring is found. If the substring is not found, it returns -1.
+print(course.replace("p", "j")) #method in Python is used to replace occurrences of a specified substring with another substring.
 print("pro" in course)  # returns boolean that it is found within the string
 print("swift" not in course)
 x = 1
