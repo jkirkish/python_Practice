@@ -186,7 +186,7 @@ class Animal:
         print("walk")
     
 
-#inheritance (DRY dont' repeat yourself)
+#inheritance (DRY dont' repeat yourself)have inheritance classes that go to one or two levels
 class Mammal(Animal):
     def __init__(self):
         super().__init__()
@@ -215,3 +215,150 @@ m.eat()
 
 print(m.age)
 print(m.weight)
+
+class Employee:
+    def greet(self):
+        print("Employee Greet")
+
+class Person:
+    def greet(self):
+        print("Person Greet")
+
+"""multilevel inheritance goes into the order of Employee first, and then person second. You want to be careful 
+not to switch the order if you have it a certain way"""
+class Manager(Employee, Person):
+    pass
+
+manager = Manager()
+manager.greet()
+"""he ABC and abstractmethod are tools provided by Python's abc (Abstract Base Classes) module to define abstract base classes, which are classes that cannot be instantiated directly and are meant to be subclassed. They are useful for defining a blueprint for other classes.
+
+Here's a breakdown of the two:
+
+ABC (Abstract Base Class)
+ABC is a base class in the abc module that you use to create abstract classes.
+An abstract class is a class that contains one or more abstract methods (methods that are declared but contain no implementation).
+Abstract classes cannot be instantiated directly; you can only create instances of their subclasses.
+abstractmethod
+abstractmethod is a decorator that you apply to methods in a class to mark them as abstract.
+An abstract method is a method that is declared in an abstract class but lacks a complete implementation.
+Subclasses of an abstract class are required to override all abstract methods. If a subclass does not implement all abstract methods, it also becomes abstract and cannot be instantiated."""
+from abc import ABC, abstractmethod
+
+class InvalidOperationError(Exception):
+    pass
+
+class Stream(ABC):
+    def __init__(self):
+        self.opened = False
+
+    def open(self):
+        if self.opened:
+            raise InvalidOperationError("Stream is already open")
+        self.opened = True
+    def close(self):
+        if not self.opened:
+            raise InvalidOperationError("Stream is already closed")
+        self.opened = False
+    
+    
+    @abstractmethod
+    def read(self):
+        pass
+
+"""a Good level of multilevel inheritance"""
+class FileStream(Stream):
+    def read(self):
+        print("Reading data from a file")
+
+class NetworkStream(Stream):
+    def read(self):
+        print("Reading data from a network")
+
+class MemoryStream(Stream):
+    def read(self):
+        print("Reading data from a memory stream.")
+
+stream = MemoryStream()
+stream.open()
+
+#polymorphism
+class UIControl(ABC):
+    @abstractmethod
+    def draw(self):
+        pass
+
+class TextBox(UIControl):
+    def draw(self):
+        print("TextBox")
+   
+class DropDownList(UIControl):
+    def draw(self):
+        print("DropDownList")
+
+def draw(control):
+    for control in control:
+        control.draw()
+
+ddl = DropDownList()
+print(isinstance(ddl, UIControl))
+
+
+ddl = DropDownList()
+textBox = TextBox()
+draw([ddl, textBox])
+
+
+"""Polymorphism in Python refers to the ability of different classes to be treated as instances of the same class through a common interface. It allows for methods to be called on different objects, and the object will determine which implementation of the method to execute.
+
+Types of Polymorphism in Python
+Duck Typing:
+
+Python uses a dynamic type system where the type of an object is determined at runtime.
+Duck typing is a concept where an object's suitability is determined by the presence of certain methods and properties, rather than the type of the object itself.
+The famous saying "If it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck" explains this idea.Method Overriding:
+
+Method overriding occurs when a subclass provides a specific implementation of a method that is already defined in its superclass.
+The overridden method in the subclass will be called, allowing polymorphic behavior.Function Polymorphism:
+
+In Python, functions can take arguments of different types, leading to different behavior depending on the type of input.
+This is not as formalized as method overriding but allows for flexibility in function behavior.Polymorphism is especially useful when you want to write generic code that can work with objects of different types but share the same interface."""
+
+#Extending built-in types
+class Text(str):
+    def duplicate (self):
+        return self + self
+    
+text = Text("Python")
+print(text.duplicate())
+
+class TrackableList(list):
+    def append(self, object):
+        print("Append called")
+        super().append(object)
+
+list = TrackableList()
+list.append("1")
+
+
+#Data Classes
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+
+p1 = Point(1,2)
+p2 = Point(1,2)
+print(id(p1))
+print(id(p2))
+print(p1 == p2)
+
+from collections import namedtuple
+    
+Point = namedtuple("Point", ["x", "y"])
+p1 = Point(x=1, y=2)
+p2 = Point(x=1, y=2)
+print(p1==p2)
