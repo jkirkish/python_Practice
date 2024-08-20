@@ -356,6 +356,14 @@ print(id(p1))
 print(id(p2))
 print(p1 == p2)
 
+"""A namedtuple in Python is a factory function for creating tuple subclasses with named fields. It's a way to define simple classes that only contain data, where you can access the fields by name instead of by index. namedtuple is part of the collections module.ey features of namedtuple:
+Immutability: Like regular tuples, namedtuple instances are immutable, meaning you can't change their values after creation.
+Readable code: Accessing fields by name instead of by index makes the code more readable and self-documenting.
+Compatibility: namedtuple instances can be used in most places where a regular tuple is expected, making them versatile.
+Use cases:
+Returning multiple values from a function with named attributes.
+Structuring data in a readable and easy-to-manage way.
+You can also add default values, specify a verbose name for the class, or enforce certain behaviors using the namedtuple options."""
 from collections import namedtuple
     
 Point = namedtuple("Point", ["x", "y"])
