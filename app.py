@@ -25,6 +25,7 @@ print(students_count)
 print(len(course))  # return the number of characters 18 in the string
 print(course[0]) #P
 print(course[-1])#g
+print(f"should be n:{course[-2]}")#n
 print(course[0:3])#Pyt
 print(course[0:])#Python Programming
 print(course[:3])#Pyt
@@ -50,7 +51,7 @@ course = "   python programming"
 print(course.upper()) #to upper case
 print(course)
 print(course.lower())# to lower case
-print(course.title())# capitalizes the first letter of each wor
+print(course.title())# capitalizes the first letter of each word
 print(course.rstrip()) #removes the trailing whitespace or any trailing characters end of a string
 print(course.find("pro"))  # method in Python is used to search for the first occurrence of a specified substring in a string.
 print(course.find("bde"))  # It returns the lowest index where the substring is found. If the substring is not found, it returns -1.
@@ -60,21 +61,21 @@ print("swift" not in course)
 x = 1
 x = 1.1
 x = 1 + 2j
-print(10 + 3)
-print(10 - 3)
-print(10 * 3)
-print(10 / 3)
-print(10 // 3)  # integers
-print(10 % 3)  # modulus
-print(10 ** 3)  # exponent
+print(10 + 3)#13
+print(10 - 3)#7
+print(10 * 3)#30
+print(10 / 3)#3.3333333333
+print(10 // 3)  # integers 3
+print(10 % 3)  # modulus  1
+print(10 ** 3)  # exponent 1000
 
 x = 10
 x = x + 3  # is the same as
 x += 3
-print(round(2.9))
-print(abs(-2.9))
-print(math.ceil(2.2))  # https://docs.python.org/3/library/math.html
-input("x: ")
+print(round(2.9)) #3
+print(abs(-2.9)) #2.9
+print(math.ceil(2.2))  # https://docs.python.org/3/library/math.html  3
+input("x: ")  #input a value from keyboard for x
 print(type(x))
 y = int(x) + 1
 print(f"x: {x}, y: {y}")

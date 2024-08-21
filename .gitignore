@@ -1,0 +1,10 @@
+*.txt
+main.js
+README.md
+package.json
+package-lock.json
+
+.log
+
+*.class
+
