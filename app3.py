@@ -1,11 +1,35 @@
 letters = ["a","b","c"]
 matrix = [[0,1],[2,3]]
-zeros = [0] * 5
+zeros = [0] * 50
 #Lists can be combined and do not have to be the same type
 combined = zeros + letters
 print(combined)
 numbers = list(range(20))
+print(numbers[::1])
 print(numbers)
+numbers = list(range(20))  # Creates a list of numbers from 0 to 19.
+
+print("Last element only:", numbers[-1:])        # Returns a list with only the last element [19].
+print("Up to second-to-last:", numbers[:-2])     # Returns a list from the start up to (but not including) the second-to-last element [0, 1, ..., 17].
+print("Every 3rd element:", numbers[::3])        # Returns every 3rd element from the list [0, 3, 6, 9, 12, 15, 18].
+print("Up to last 3 elements:", numbers[:-3])    # Returns the list from the start up to (but not including) the last 3 elements [0, 1, ..., 16].
+print("Entire list:", numbers[::1])              # Returns the entire list without any changes [0, 1, ..., 19].
+
+print("Every 2nd element:", numbers[::2])        # Returns every 2nd element from the list [0, 2, 4, 6, ..., 18].
+print("Reversed list:", numbers[::-1])           # Returns the entire list reversed [19, 18, ..., 0].
+print("Every 2nd element reversed:", numbers[::-2])  # Returns every 2nd element in reverse order [19, 17, 15, ..., 1].
+print("Every 3rd element:", numbers[::3])        # Returns every 3rd element from the list [0, 3, 6, 9, 12, 15, 18].
+print("Every 3rd element reversed:", numbers[::-3])  # Returns every 3rd element in reverse order [19, 16, 13, 10, 7, 4, 1].
+
+for num in numbers:
+    if num != 0:  # Avoid slicing with step 0
+        print(numbers[::num])
+
+"""numbers[::1]
+This syntax uses Python slicing with the step size (1), which means "take every element starting from the beginning to the end of the list, with no skipping."
+It essentially returns the entire list without any modifications.
+numbers[::1] returns the entire list.
+numbers[:1] returns a sublist containing only the first element."""
 chars = list("Hello World")
 print(chars)
 print(len(chars))

@@ -22,10 +22,10 @@ rating = 4.99
 is_published = False
 course = "Python Programming"
 print(students_count)
-print(len(course))  # return the number of characters 18 in the string
+print(f"The length of course is: {len(course)}")  # return the number of characters 18 in the string
 print(course[0]) #P
 print(course[-1])#g
-print(f"should be n:{course[-2]}")#n
+print(f"course[-2] should be n:{course[-2]}")#n
 print(course[0:3])#Pyt
 print(course[0:])#Python Programming
 print(course[:3])#Pyt
@@ -82,3 +82,11 @@ print(f"x: {x}, y: {y}")
 # primitives int, float, bool, strings, None
 fruit = "Apple"
 print(fruit[1:-1])
+for start in range(1, len(fruit)):
+    for end in range(start + 1, len(fruit) + 1):
+        print(f"fruit[{start}:{end}] = {fruit[start:end]}")
+#decrementing for loops
+print("Decrementing")
+for start in range(len(fruit) - 1, 0, -1):
+    for end in range(start + 1, len(fruit) + 1):
+        print(f"fruit[{start}:{end}] = {fruit[start:end]}")

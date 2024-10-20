@@ -83,5 +83,105 @@ save_user(id=1, name="John", age=22)
 # F9 is used to add a breakpoint
 # f5 opens the integreated terminal
 
+# Examples of bool() function behavior with different inputs
+
+# Empty string -> False
+print("Empty string:", bool(""))  # False
+
+# Non-empty string -> True
+print("Non-empty string:", bool("hello"))  # True
+
+# Integer 0 -> False
+print("Integer 0:", bool(0))  # False
+# Examples of bool() function behavior with different inputs
+
+# Empty string -> False
+print("Empty string:", bool(""))  # False
+
+# Non-empty string -> True
+print("Non-empty string:", bool("hello"))  # True
+
+# Integer 0 -> False
+print("Integer 0:", bool(0))  # False
+
+# Positive integer -> True
+print("Positive integer:", bool(100))  # True
+
+# Negative integer -> True
+print("Negative integer:", bool(-1))  # True
+
+# Empty list -> False
+print("Empty list:", bool([]))  # False
+
+# Non-empty list -> True
+print("Non-empty list:", bool([1, 2, 3]))  # True
+
+# Empty tuple -> False
+print("Empty tuple:", bool(()))  # False
+
+# Non-empty tuple -> True
+print("Non-empty tuple:", bool((1, 2)))  # True
+
+# Empty dictionary -> False
+print("Empty dictionary:", bool({}))  # False
+
+# Non-empty dictionary -> True
+print("Non-empty dictionary:", bool({"key": "value"}))  # True
+
+# None -> False
+print("None:", bool(None))  # False
+
+# Float 0.0 -> False
+print("Float 0.0:", bool(0.0))  # False
+
+# Non-zero float -> True
+print("Non-zero float:", bool(3.14))  # True
+
+# Boolean False -> False
+print("Boolean False:", bool(False))  # False
+
+# Boolean True -> True
+print("Boolean True:", bool(True))  # True
+
+# Positive integer -> True
+print("Positive integer:", bool(100))  # True
+
+# Negative integer -> True
+print("Negative integer:", bool(-1))  # True
+
+# Empty list -> False
+print("Empty list:", bool([]))  # False
+
+# Non-empty list -> True
+print("Non-empty list:", bool([1, 2, 3]))  # True
+
+# Empty tuple -> False
+print("Empty tuple:", bool(()))  # False
+
+# Non-empty tuple -> True
+print("Non-empty tuple:", bool((1, 2)))  # True
+
+# Empty dictionary -> False
+print("Empty dictionary:", bool({}))  # False
+
+# Non-empty dictionary -> True
+print("Non-empty dictionary:", bool({"key": "value"}))  # True
+
+# None -> False
+print("None:", bool(None))  # False
+
+# Float 0.0 -> False
+print("Float 0.0:", bool(0.0))  # False
+
+# Non-zero float -> True
+print("Non-zero float:", bool(3.14))  # True
+
+# Boolean False -> False
+print("Boolean False:", bool(False))  # False
+
+# Boolean True -> True
+print("Boolean True:", bool(True))  # True
+
+
 
 

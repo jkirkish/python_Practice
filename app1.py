@@ -38,9 +38,9 @@ else:
 
 
 if not student:
-    print("Student is eligible")
+    print("Student is eligiblen")
 else:
-    print("Not eligible")
+    print("Not eligiblen")
 
 
 student = True
