@@ -1,4 +1,4 @@
-# import string
+import string
 
 # def print_rangoli(size):
 #     lowercase = list(string.ascii_lowercase)
@@ -23,3 +23,40 @@
 
 
 # print_rangoli(3)
+# def first_non_repeating_char(s):
+#     # Step 1: Count frequency of each character
+#     char_count = {}
+#     for char in s:
+#         char_count[char] = char_count.get(char, 0) + 1
+#         print(f"Processed '{char}': {char} count is now {char_count[char]}")  # Print character and its new count
+    
+#     # Step 2: Find the first character with a count of 1
+#     print("\nFinding the first non-repeating character...")
+#     for char in s:
+#         if char_count[char] == 1:
+#             print(f"First non-repeating character found: '{char}'")
+#             return char
+    
+#     # Step 3: Return "_" if no unique character found
+#     print("No non-repeating character found. Returning '_'")
+#     return "_"
+
+# # Test the function
+# first_non_repeating_char("swiss")
+
+n = int(input())
+words = [input().strip() for _ in range(n)]
+
+word_count = {}
+order_of_appearance = []
+
+for word in words:
+    if word not in word_count:
+        word_count[word] = 1
+        order_of_appearance.append(word)
+    else:
+        word_count[word] += 1
+        
+print(len(order_of_appearance))
+
+print(" ".join(str(word_count[word]) for word in order_of_appearance))

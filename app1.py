@@ -10,13 +10,13 @@ else:
     print("It's cold")
 print("Done")
 
-age = 22
+age = 18
 if age >= 18:
     message = "is eligible"
 else:
     message = "is not eligible"
 print(message)
-# another way to say this with few code is:
+# another way to say this with fewer lines of code is:
 age = 23
 message = "is eligible" if age >= 18 else "is not eligible"
 print(f"His age {age} {message}")
@@ -36,11 +36,11 @@ if high_income or good_credit:
 else:
     print("Not Eligible")
 
-
+student = False
 if not student:
-    print("Student is eligiblen")
+    print("Student is eligible")
 else:
-    print("Not eligiblen")
+    print("Not eligible")
 
 
 student = True
@@ -61,7 +61,7 @@ if 18 <= age < 65:
     print("Eligible")
 # for loops
 for number in range(3, 10, 2):
-    print("Attempt", number + 1, number * ".")
+    print("Attempt", number, number * ".")
 
 successful = False
 for number in range(3):
@@ -84,10 +84,10 @@ print(type(range(5)))
 # iterable
 for x in "Python":
     print(x)
-
+    print(type(x))
 for x in [1, 2, 3, 4]:
     print(x)
-
+    print(type(x))
 # for item in shopping_cart:
     # print(item)
 
@@ -95,10 +95,36 @@ for x in [1, 2, 3, 4]:
 number = 100
 while number > 0:
     print(number)
-    number //= 2
+    number //= 2  # //= Performs floor division, truncates the decimal part, and keeps the result as an integer.
+
+number = 100
+while number > 0:
+    print(number)
+    number /= 2 #//Performs true division, keeps the result as a floating-point number, even if the division is exact.
+
+
 # infinite loops need to have a way to stop to avoid consuming too much memory
 while True:
     command = input(">")
     print("ECHO", command)
     if command.lower() == "quit":
         break
+
+question = "what is a data structure?"
+Data_Structure_answer = "A data structure is storage that is used to store and organize data."
+Data_Structure_answer2 = "It is a way of arranging data on a computer so that it can be accessed and updated efficiently."
+
+while True:
+    command = input(" yes or no: ")
+    print("User says:", command)
+    if command.lower() == "no":
+        break
+    elif command.lower() == "yes":
+        print("Are you ready for a Data Structure quiz?")
+        print("Ok here goes. ", question)
+        user_input = input("Your answer: ")
+        if not user_input or user_input:
+            print(Data_Structure_answer, Data_Structure_answer2)
+        
+    
+    
