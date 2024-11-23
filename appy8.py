@@ -44,19 +44,28 @@ import string
 # # Test the function
 # first_non_repeating_char("swiss")
 
-n = int(input())
-words = [input().strip() for _ in range(n)]
+# n = int(input())
+# words = [input().strip() for _ in range(n)]
 
-word_count = {}
-order_of_appearance = []
+# word_count = {}
+# order_of_appearance = []
 
-for word in words:
-    if word not in word_count:
-        word_count[word] = 1
-        order_of_appearance.append(word)
-    else:
-        word_count[word] += 1
+# for word in words:
+#     if word not in word_count:
+#         word_count[word] = 1
+#         order_of_appearance.append(word)
+#     else:
+#         word_count[word] += 1
         
-print(len(order_of_appearance))
+# print(len(order_of_appearance))
 
-print(" ".join(str(word_count[word]) for word in order_of_appearance))
+# print(" ".join(str(word_count[word]) for word in order_of_appearance))
+
+
+#a set is a collection that unordered, unchangeable, unindexed
+myset = {"apple","banana", "cherry"}
+print(myset)
+
+# The values of True and 1 are considered the same value in sets, and are treated as duplicates
+thisset = {"apple","banana","cherry","True",1,2}
+print(thisset)
