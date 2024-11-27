@@ -85,3 +85,220 @@ def print_formatted(number):
 if __name__ == '__main__':
     n = int(input())
     print_formatted(n)
+
+#Python Dictionaries are used to store data values in key:value pairs.
+#A dictionary is a collection which is ordered. changeable and do not allow duplicates
+thisdict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year" : 1964
+}
+print(thisdict["brand"]) # this prints out "Ford"
+
+#Dictionary items are presented in key:value pairs, and can be referred to by using the key name
+#Dictionaries are ordered, it means that the items have a defined order, and that order will not change
+#unordered means that the items do not have a defined order, you cannot refer to an item by using an index
+#Dictionaries are changeable, meaning that we can change, add or remove items after the dictionary has been 
+#created
+
+#Duplicates Not Allowed
+#Dictionaries cannot have two items with the same key.  
+#Duplicate values will overwrite existing values
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964,
+  "year": 2020
+}
+print(thisdict) #this will print out for year 2020
+
+#to determine how many items a dictionary has, use the len() function:
+print(len(thisdict)) #this prints out 3
+
+#the values in dictionary items can be of any data type String, int, boolean and list data types
+thisdict = {
+
+    "brand": "Ford",
+    "electric": False,
+    "year": 1964,
+     "colors": ["red", "white", "blue"]
+}
+print(type(thisdict))#Python's perspective dictionaries are defined as objects with the data type 'dict':
+
+#it is also possible to use the dict() constructor to make a dictionary
+thisdict = dict(name = "John", age = 36, country = "Norway")
+print(thisdict)
+
+#Python Collections you can access the items of a dictionary by referring to its key name, inside square brackets
+thisdict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year" : 1964
+}
+x = thisdict["model"]
+print(x)
+
+#there is also a method called get() that will give you the same result:
+x = thisdict.get("model")
+print(x)
+
+#the keys method will return a list of all the keys in the dictionary
+x = thisdict.keys()
+print(x)
+#the list of the keys is a view of the dictionary, meaning that any changes done to the 
+#dictionary will be reflected in the keys list. 
+#add a new item to the orginal dictionary, and see that the keys list gets updated as well:
+car = {
+    "brand" : "Ford",
+    "model" : "Mustang",
+    "years" : 1964
+}
+
+x = car.keys()
+print(x)#before the change
+
+car["color"] = "white"
+print(x)
+
+# value() method will return a list of all the values in the dictionary
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = thisdict.values()
+
+print(x)
+#make a change in the original dictionary, and see that the values lists gets updated as well
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.values()
+
+print(x) #before the change
+
+car["year"] = 2020
+
+print(x) #after the change
+
+
+# add a new item to the original dictionary, and see that the values lists get updated as well
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+x = car.values()
+print(x)
+
+car["color"] = "red"
+print(x)# after the change
+
+#the items() method will return each item in a dictionary as tuples in a list
+x = thisdict.items()
+
+# the returned list is a view of the items of the dictionary, meaning that any changes done to the dictionary 
+#will be reflected in the items list. 
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.items()
+
+print(x) #before the change
+
+car["year"] = 2020
+
+print(x) #after the change
+
+#check if a key exists in a dictionary use the "in" keyword
+thisdict = {
+    "brand" : "Ford",
+     "model" : "Mustang",
+     "year" : 1964
+}
+if "model" in thisdict:
+    print("Yes, 'model' is one of the keys in thisdict dictionary")
+
+
+#change values you can change the value of a specific item by referring to its key name:
+thisdict = {
+    "brand" : "Ford",
+    "model" : "Mustang",
+    "year" : 1964
+}
+thisdict["year"] = 2018
+
+#the update() method will update the dictionary with the items from the given argument. The
+#the argument must be a dictionary, or an iterable object with key:value pairs. 
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"year": 2020})
+
+print(thisdict)
+
+#adding items to the dictionary is done by using a new index key and assigning a value to it:
+#the update method will update the dictionary with the items from a given argument. If the item
+#does not exist, the item will be added.  The argument must be a dictionary, or an iterable object
+#with key:value pairs. 
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"color": "red"})
+
+print(thisdict)
+
+
+#removing items from the dictionary involve several ways
+#the pop() method removes the item with the specified key name:
+thisdict = {
+    "brand" : "Ford",
+    "model" : "Mustang",
+    "year" : 1964
+}
+thisdict.pop("model")
+print(thisdict)
+
+#the popitem() method removes the last inserted item
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.popitem()
+print(thisdict)
+
+#the del keyword removes the item with the specified key name:
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+del thisdict["model"]
+print(thisdict)
+
+#the del keyword can also delete the dictionary completely
+del thisdict
+#printing the dictionary after it has been deleted will cause an error
+
+#the clear() method empties the dictionary:
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.clear()
+print(thisdict)
